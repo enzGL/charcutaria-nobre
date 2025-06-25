@@ -21,7 +21,7 @@ include "banner.php";
                     <img src="<?= $foto ?>" class="img-fluid img-formatada">
                     <h3><?= $nome ?></h3>
                     <span class="preco">R$<?= $preco?> <br></span>
-                    <button type="button" class="btn btn-outline-danger">Ver Detalhes</button>
+                    <a href="detalhes.php?id=<?=$linha['id'];?>" class="btn btn-outline-danger">Ver Detalhes</a>
                 </div>
             <?php
             }

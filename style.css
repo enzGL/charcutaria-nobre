@@ -14,7 +14,7 @@ h6 {
 h2 {
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .banner {
     margin-top: 20px;
@@ -22,4 +22,31 @@ h2 {
     width: 100%;
     object-fit: cover;
     margin-bottom: 30px;
+}
+.img-formatada{
+    height: 290px;
+    width: 300px;
+}
+.preco{
+    color: rgb(6, 155, 6);
+    font-weight: bold;
+}
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer img {
+    width: 100px;
+}
+
+footer small {
+    display: block;
+}
+.texto-rodape{
+    margin-top: 10px;
+    font-weight: bold;
+}
+.img-formatada-lista{
+    height: 290px;
 }

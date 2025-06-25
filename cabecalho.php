@@ -16,6 +16,7 @@
         <h6>Cortes nobres, sabores inesquecíveis.</h6>
         <nav>
             <a href="index.php" class="btn btn-danger col-1">Inicio</a>
+            <a href="produtos.php" class="btn btn-danger col-1">Produtos</a>
         </nav>
     </header>
 </body>

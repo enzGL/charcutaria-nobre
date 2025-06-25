@@ -20,7 +20,7 @@ include "cabecalho.php";
         <div class="container">
             <div class="row mx-5 mt-5">
                 <div class="col">
-                    <img src="<?= $foto ?>" class="img-fluid" style="max-width: 500px">
+                    <img src="<?= $foto ?>" class="img-fluid img-formatada-detalhe">
                 </div>
                 <div class="col text-center fs-3" style="margin-top: 100px;">
                         <h5 class="fs-1"><?= $nome ?></h5>

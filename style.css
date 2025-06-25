@@ -50,3 +50,7 @@ footer small {
 .img-formatada-lista{
     height: 290px;
 }
+.img-formatada-detalhe{
+    height: 500px;
+    width: 500px    ;
+}

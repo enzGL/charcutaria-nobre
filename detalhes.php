@@ -15,6 +15,8 @@ include "cabecalho.php";
         $tipo = $linha['tipo'];
         $fornecedor = $linha['fornecedor'];
         $peso = $linha['peso_kg'];
+        $validade = $linha['data_validade'];
+        $armazenamento = $linha['armazenamento'];
     ?>
 
         <div class="container">
@@ -23,10 +25,10 @@ include "cabecalho.php";
                     <img src="<?= $foto ?>" class="img-fluid img-formatada-detalhe">
                 </div>
                 <div class="col text-center fs-3" style="margin-top: 100px;">
-                        <h5 class="fs-1"><?= $nome ?></h5>
-                        <p>Tipo: <?= $tipo ?></p>
-                        <p>Fornecedor: <?= $fornecedor ?></p>
-                        <p><?=$peso?> KG</p>
+                        <h5 class="fs-1"><?= $nome ?> | <?=$peso?> KG</h5>
+                        <p>Tipo: <?= $tipo ?> | Fornecedor: <?= $fornecedor ?></p>
+                        <p>Data de validade: <?= $validade ?></p>
+                        <p class="armazenamento">Armazenamento: <?=$armazenamento?></p>
                         <p class="preco">R$ <?=$preco?></p>
                 </div>
             </div>

@@ -4,33 +4,39 @@ include "banner.php";
 ?>
 
 <div class="container">
-    <h2 class="display-5">⭐Destaques⭐</h2>
+    <h2 class="display-5 titulo-destaque">⭐ DESTAQUES ⭐</h2>
 
     <div class="row mb-5">
-    <?php
+        <?php
         include "conexao.php";
         $sql = "select * from produtos_charcutaria order by preco_unitario asc limit 8";
         $resultado = mysqli_query($conexao, $sql);
 
-        while ($linha = mysqli_fetch_assoc($resultado)){
+        while ($linha = mysqli_fetch_assoc($resultado)) {
             $nome = $linha['nome_produto'];
             $foto = $linha['foto'];
             $preco = $linha['preco_unitario']
-            ?>
-                <div class="col-3 mb-5 text-center">
-                    <img src="<?= $foto ?>" class="img-fluid img-formatada">
-                    <h3><?= $nome ?></h3>
-                    <span class="preco">R$<?= $preco?> <br></span>
-                    <a href="detalhes.php?id=<?=$linha['id'];?>" class="btn btn-outline-danger">Ver Detalhes</a>
+        ?>
+            <div class="col-md-3 mb-4">
+                <div class="card-produto h-100 bg-white p-2 text-center">
+                    <img src="<?= $foto ?>" class="img-fluid mb-2 img-formatada" alt="<?= $nome ?>">
+                    <h5 class="fw-bold"><?= $nome ?></h5>
+                    <p class="text-danger fw-semibold">R$<?= number_format($preco, 2, ',', '.') ?></p>
+                    <a href="detalhes.php?id=<?= $linha['id']; ?>" class="btn btn-outline-danger btn-sm">Ver Detalhes</a>
                 </div>
-            <?php
-            }
-    
-            mysqli_close($conexao);
-            ?>
+            </div>
+        <?php
+        }
+
+        mysqli_close($conexao);
+        ?>
     </div>
 
-    <button type="button" class="btn btn-danger btn-lg mt-5 fs-5 fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 450px">Deseja fazer uma encomenda? Clique aqui!</button>
+    <div class="text-center mt-5">
+        <button type="button" class="btn-encomenda" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Deseja falar conosco? Clique aqui!
+        </button>
+    </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -50,5 +56,5 @@ include "banner.php";
         </div>
     </div>
 
-</div> 
+</div>
 <?php include "rodape.php"; ?>

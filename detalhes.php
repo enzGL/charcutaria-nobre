@@ -17,6 +17,7 @@ include "cabecalho.php";
         $peso = $linha['peso_kg'];
         $validade = $linha['data_validade'];
         $armazenamento = $linha['armazenamento'];
+        $lote = $linha['lote'];
     ?>
 
         <div class="container">
@@ -28,6 +29,7 @@ include "cabecalho.php";
                     <h5><?= $nome ?> | <?= $peso ?> KG</h5>
                     <p>Tipo: <?= $tipo ?> | Fornecedor: <?= $fornecedor ?></p>
                     <p>Data de validade: <?= $validade ?></p>
+                    <p>Lote: <?= $lote ?></p>
                     <p class="armazenamento">Armazenamento: <?= $armazenamento ?></p>
                     <p class="preco">R$ <?= number_format($preco, 2, ',', '.') ?></p>
                     <button type="button" class="btn-encomenda" data-bs-toggle="modal" data-bs-target="#exampleModal">
